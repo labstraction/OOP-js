@@ -1,12 +1,19 @@
 class GUI {
 
     constructor() {
-        this.library = new Library();
+
+        this.storage = new Storage();
+        this.library = new Library()
+        const data = this.storage.loadData();
+        if (data !== null) {
+            this.library.fromDbObjects(data);
+        }
+        
     }
 
     start() {
         while (true) {
-            
+
             const firstChoice = prompt(
                     "Hai 4 opzioni:\n" +
                     "1)Guarda la lista dei libri\n" +
@@ -41,6 +48,8 @@ class GUI {
         const book = new Book(title, author, dop, publisher);
 
         this.library.addPublication(book);
+
+        this.storage.saveData(this.library.publications);
     }
 
 
@@ -57,6 +66,8 @@ class GUI {
         const humanIndex = prompt('Inserisci il numero del libro da eliminare');
         const index = humanIndex - 1;
         this.library.deletePublication(index);
+
+        this.storage.saveData(this.library.publications);
 
     }
 

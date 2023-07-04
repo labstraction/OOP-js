@@ -81,3 +81,46 @@
 const gui = new GUI();
 
 gui.start();
+
+
+///JSON----------------------------------------------------
+
+// const student1 = {
+//     name: 'bryan',
+//     yob: 1994,
+//     isMarried: false
+// }
+
+// console.log(student1);
+
+// const student1JSON = JSON.stringify(student1);
+
+// console.log(student1JSON);
+
+
+// const stringArray = ['qui', 'quo', 'qua'];
+
+// const stringArrayJSON = JSON.stringify(stringArray);
+
+// console.log(stringArrayJSON);
+
+
+// const student2 = {
+//     name: 'francesca',
+//     yob: 1989,
+//     isMarried: false
+// }
+
+
+// const studentArray = [student1, student2];
+
+// const studentArrayJSON = JSON.stringify(studentArray);
+
+// console.log(studentArrayJSON);
+
+
+// const jsonString = '[{"name":"bryan","yob":1994,"isMarried":false},{"name":"francesca","yob":1989,"isMarried":false}]'
+
+// const studentArray = JSON.parse(jsonString);
+
+// console.log(studentArray);

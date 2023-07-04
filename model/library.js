@@ -31,4 +31,13 @@ class Library{
         return allCards;
     }
 
+    fromDbObjects(data){
+
+        for (const genericObject of data) {
+            const book = new Book(genericObject.title, genericObject.author, genericObject.dop, genericObject.publisher);
+            this.publications.push(book);
+        }
+
+    }
+
 }
